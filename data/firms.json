@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "FTMO",
+    "capital": "$200K",
+    "profitSplit": "90%",
+    "payout": "Bi-weekly",
+    "logo": "ftmo.webp"
+  },
+  {
+    "id": 2,
+    "name": "MyForexFunds",
+    "capital": "$300K",
+    "profitSplit": "85%",
+    "payout": "Weekly",
+    "logo": "myforexfunds.webp"
+  },
+  {
+    "id": 3,
+    "name": "The5ers",
+    "capital": "$100K",
+    "profitSplit": "80%",
+    "payout": "Monthly",
+    "logo": "the5ers.webp"
+  }
+]

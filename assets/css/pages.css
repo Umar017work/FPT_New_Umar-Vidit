@@ -1,0 +1,173 @@
+/* ===============================
+   HERO SECTION SPECIFIC
+   =============================== */
+.hero {
+  background: linear-gradient(135deg, #2563eb 0%, #10b981 100%);
+  color: var(--color-white);
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-actions .btn {
+  min-width: 140px;
+}
+
+/* ===============================
+   FEATURED FIRMS SECTION
+   =============================== */
+.featured-firms {
+  background-color: var(--color-bg);
+  padding: 5rem 0;
+}
+
+.featured-firms h2 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* Firm card overrides for page */
+.firm-card {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.firm-card img {
+  margin-bottom: 1rem;
+}
+
+.firm-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ===============================
+   COMPARE PREVIEW SECTION
+   =============================== */
+.compare-preview {
+  padding: 4rem 0;
+  background-color: var(--color-white);
+}
+
+.compare-preview h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.compare-preview p {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+/* ===============================
+   BLOG PREVIEW SECTION
+   =============================== */
+.blog-preview {
+  padding: 5rem 0;
+}
+
+.blog-preview h2 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.blog-grid {
+  gap: 2rem;
+}
+
+.blog-card {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.blog-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.blog-card p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+/* ===============================
+   TRUST STRIP
+   =============================== */
+.trust-strip {
+  background-color: var(--color-white);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: 1.5rem 0;
+}
+
+.trust-items .trust-item {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* ===============================
+   FOOTER SPECIFIC
+   =============================== */
+.site-footer {
+  padding: 3rem 0;
+}
+
+.site-footer p {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+.footer-nav a {
+  font-size: 0.9rem;
+}
+
+/* ===============================
+   RESPONSIVE ADJUSTMENTS
+   =============================== */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .featured-firms h2,
+  .compare-preview h2,
+  .blog-preview h2 {
+    font-size: 1.5rem;
+  }
+
+  .firm-grid,
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main-nav {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    margin-bottom: var(--space-sm);
+  }
+}

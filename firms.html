@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Prop Firms | QandProp</title>
+<link rel="stylesheet" href="assets/css/base.css" />
+<link rel="stylesheet" href="assets/css/layout.css" />
+<link rel="stylesheet" href="assets/css/components.css" />
+<link rel="stylesheet" href="assets/css/pages.css" />
+<script defer src="assets/js/main.js"></script>
+<script defer src="assets/js/firms.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo"><a href="index.html">QandProp</a></div>
+    <nav class="main-nav">
+      <a href="firms.html">Prop Firms</a>
+      <a href="compare.html">Compare</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<section class="featured-firms">
+  <div class="container">
+    <h2>All Prop Firms</h2>
+    <form id="firm-filter">
+      <input type="text" id="capital" placeholder="Filter by Capital">
+      <input type="text" id="profit-split" placeholder="Filter by Profit Split">
+      <button type="submit">Filter</button>
+    </form>
+    <div class="firm-grid"></div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© 2025 QandProp. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
