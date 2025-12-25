@@ -2,6 +2,7 @@
   {
     "id": 1,
     "name": "FTMO",
+    "type": "forex",
     "capital": "$200K",
     "profitSplit": "90%",
     "payout": "Bi-weekly",
@@ -10,6 +11,7 @@
   {
     "id": 2,
     "name": "MyForexFunds",
+    "type": "futures",
     "capital": "$300K",
     "profitSplit": "85%",
     "payout": "Weekly",
@@ -18,9 +20,19 @@
   {
     "id": 3,
     "name": "The5ers",
+    "type": "stocks",
     "capital": "$100K",
     "profitSplit": "80%",
     "payout": "Monthly",
     "logo": "the5ers.webp"
+  },
+  {
+    "id": 4,
+    "name": "samplefirm",
+    "type": "crypto",
+    "capital": "$500K",
+    "profitSplit": "85%",
+    "payout": "Monthly",
+    "logo": "samplefirm"
   }
 ]

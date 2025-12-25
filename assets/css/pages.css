@@ -1,164 +1,328 @@
 /* ===============================
-   HERO SECTION SPECIFIC
+   RESET
+   =============================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===============================
+   DESIGN SYSTEM (AURORA DARK)
+   =============================== */
+:root {
+  /* Backgrounds */
+  --bg-main: #05060f;
+  --bg-section: #070a1a;
+  --bg-card: rgba(255, 255, 255, 0.05);
+
+  /* Glows */
+  --glow-primary: radial-gradient(
+    700px circle at 50% 0%,
+    rgba(139, 92, 246, 0.35),
+    transparent 60%
+  );
+
+  --glow-secondary: radial-gradient(
+    600px circle at 80% 20%,
+    rgba(56, 189, 248, 0.25),
+    transparent 60%
+  );
+
+  /* Accents */
+  --color-primary: #8b5cf6;
+  --color-primary-dark: #7c3aed;
+  --color-accent: #22c55e;
+
+  /* Text */
+  --color-text: #f8fafc;
+  --color-muted: #94a3b8;
+
+  /* Borders */
+  --color-border: rgba(255, 255, 255, 0.08);
+
+  /* Typography */
+  --font-base: system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 3rem;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+
+  /* Blur */
+  --glass-blur: blur(16px);
+}
+
+/* ===============================
+   GLOBAL
+   =============================== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-base);
+  background:
+    var(--glow-primary),
+    var(--glow-secondary),
+    linear-gradient(180deg, #020617, var(--bg-main));
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ===============================
+   TYPOGRAPHY
+   =============================== */
+h1, h2, h3 {
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-text);
+}
+
+p {
+  color: var(--color-muted);
+}
+
+/* ===============================
+   LAYOUT
+   =============================== */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 var(--space-md);
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* ===============================
+   BUTTONS
+   =============================== */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+/* Primary */
+.btn-primary {
+  background: linear-gradient(135deg, #8b5cf6, #38bdf8);
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Outline */
+.btn-outline {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  backdrop-filter: var(--glass-blur);
+}
+
+.btn-outline:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* ===============================
+   HEADER
+   =============================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(5,6,15,0.75);
+  backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-md) 0;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.main-nav a {
+  margin-left: var(--space-lg);
+  color: var(--color-muted);
+}
+
+.main-nav a:hover {
+  color: var(--color-text);
+}
+
+/* ===============================
+   HERO
    =============================== */
 .hero {
-  background: linear-gradient(135deg, #2563eb 0%, #10b981 100%);
-  color: var(--color-white);
-  padding: 5rem 0;
+  padding: 7rem 1rem 6rem;
   text-align: center;
+  background: radial-gradient(
+    800px circle at center,
+    rgba(139, 92, 246, 0.4),
+    transparent 65%
+  );
 }
 
 .hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  line-height: 1.2;
+  font-size: 3.3rem;
+  letter-spacing: -0.03em;
 }
 
 .hero p {
+  max-width: 700px;
+  margin: 1rem auto 2.5rem;
   font-size: 1.15rem;
-  margin-bottom: 2rem;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.hero-actions .btn {
-  min-width: 140px;
-}
-
-/* ===============================
-   FEATURED FIRMS SECTION
-   =============================== */
-.featured-firms {
-  background-color: var(--color-bg);
-  padding: 5rem 0;
-}
-
-.featured-firms h2 {
-  font-size: 2rem;
-  margin-bottom: 3rem;
-}
-
-/* Firm card overrides for page */
-.firm-card {
-  padding: 1.5rem;
-  text-align: center;
-}
-
-.firm-card img {
-  margin-bottom: 1rem;
-}
-
-.firm-card h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-}
-
-/* ===============================
-   COMPARE PREVIEW SECTION
-   =============================== */
-.compare-preview {
-  padding: 4rem 0;
-  background-color: var(--color-white);
-}
-
-.compare-preview h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.compare-preview p {
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 2rem;
-  font-size: 1rem;
-}
-
-/* ===============================
-   BLOG PREVIEW SECTION
-   =============================== */
-.blog-preview {
-  padding: 5rem 0;
-}
-
-.blog-preview h2 {
-  font-size: 2rem;
-  margin-bottom: 3rem;
-}
-
-.blog-grid {
-  gap: 2rem;
-}
-
-.blog-card {
-  padding: 1.5rem;
-  text-align: left;
-}
-
-.blog-card h3 {
-  font-size: 1.15rem;
-  margin-bottom: 0.5rem;
-}
-
-.blog-card p {
-  font-size: 0.95rem;
-  margin-bottom: 1rem;
 }
 
 /* ===============================
    TRUST STRIP
    =============================== */
 .trust-strip {
-  background-color: var(--color-white);
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
   padding: 1.5rem 0;
 }
 
-.trust-items .trust-item {
-  font-size: 0.95rem;
+.trust-items {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.trust-item {
+  color: var(--color-muted);
   font-weight: 500;
 }
 
 /* ===============================
-   FOOTER SPECIFIC
+   CARDS (FIRM / BLOG / COMPARE)
    =============================== */
-.site-footer {
-  padding: 3rem 0;
+.firm-card,
+.blog-card,
+.compare-table {
+  background: var(--bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  backdrop-filter: var(--glass-blur);
+  transition: all 0.3s ease;
 }
 
-.site-footer p {
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
-  color: var(--color-muted);
-}
-
-.footer-nav a {
-  font-size: 0.9rem;
+.firm-card:hover,
+.blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
 }
 
 /* ===============================
-   RESPONSIVE ADJUSTMENTS
+   FIRMS
+   =============================== */
+.featured-firms {
+  padding: var(--space-xl) 0;
+}
+
+.firm-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.firm-card {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.firm-card img {
+  max-height: 55px;
+  margin-bottom: 1rem;
+}
+
+/* ===============================
+   BLOG
+   =============================== */
+.blog-preview {
+  padding: var(--space-xl) 0;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.blog-card {
+  padding: 1.5rem;
+}
+
+/* ===============================
+   COMPARE
+   =============================== */
+.compare-preview {
+  padding: var(--space-xl) 0;
+  text-align: center;
+}
+
+/* ===============================
+   FOOTER
+   =============================== */
+.site-footer {
+  padding: 3rem 0;
+  border-top: 1px solid var(--color-border);
+  background: linear-gradient(180deg, transparent, #020617);
+  text-align: center;
+}
+
+.footer-nav a {
+  margin: 0 0.75rem;
+  color: var(--color-muted);
+}
+
+/* ===============================
+   RESPONSIVE
    =============================== */
 @media (max-width: 768px) {
   .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .featured-firms h2,
-  .compare-preview h2,
-  .blog-preview h2 {
-    font-size: 1.5rem;
-  }
-
-  .firm-grid,
-  .blog-grid {
-    grid-template-columns: 1fr;
+    font-size: 2.2rem;
   }
 
   .main-nav {
@@ -166,8 +330,12 @@
     gap: var(--space-sm);
   }
 
-  .hero-actions .btn {
+  .firm-grid,
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
     width: 100%;
-    margin-bottom: var(--space-sm);
   }
 }

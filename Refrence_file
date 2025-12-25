@@ -1,0 +1,186 @@
+2️⃣ File Details
+index.html – Home Page
+
+Sections:
+
+Header / Navigation (responsive)
+
+Hero Section (headline, subheadline, CTA buttons)
+
+Trust Strip (icon + text for credibility)
+
+Featured Firms Preview (cards dynamically loaded via firms.js)
+
+Latest Blog Preview (cards dynamically loaded via blog.js)
+
+Footer (links + copyright)
+
+Enhancements:
+
+Gradient hero background
+
+Buttons: primary & outline
+
+Responsive & mobile-first
+
+firms.html – Prop Firms Listing
+
+Sections:
+
+Search / Filter form (Capital, Profit Split)
+
+Full grid of firm cards (firm-grid) loaded dynamically via firms.js
+
+Footer
+
+JS functionality (firms.js):
+
+Fetch firms.json
+
+Render cards dynamically
+
+Filter firms on form submit
+
+Lazy-load logos for faster performance
+
+compare.html – Compare Firms
+
+Sections:
+
+Two dropdowns to select firms (firmA, firmB)
+
+Dynamic comparison table (compare-table)
+
+Footer
+
+JS functionality (compare.js):
+
+Fetch firms.json
+
+Populate dropdowns
+
+Render comparison table dynamically
+
+Highlights metrics visually
+
+Handles responsive layout
+
+blog.html – Blog Listing
+
+Sections:
+
+Blog cards container (blog-grid)
+
+Footer
+
+JS functionality (blog.js):
+
+Fetch blogs.json
+
+Render blog cards dynamically
+
+Each card: title, excerpt, “Read More” link
+
+blog-post.html – Single Blog Post (Template)
+
+Loads blog content dynamically or statically
+
+Uses query string slug (?slug=...) to identify post
+
+about.html – Company / Trust Page
+
+Contains:
+
+Company story
+
+Certifications, partnerships, and team (optional)
+
+Contact CTA
+
+Optional JS for small interactions
+
+3️⃣ CSS Files
+
+base.css → resets, default body, typography, links
+
+layout.css → grid/flex containers, spacing utilities
+
+components.css → reusable components like:
+
+.btn, .card, .compare-table, .trust-item
+
+pages.css → page-specific styling:
+
+Hero section
+
+Featured firms section
+
+Compare preview
+
+Blog preview
+
+Trust strip and footer
+
+Responsive adjustments
+
+4️⃣ JS Files
+
+main.js
+
+Mobile nav toggle
+
+Smooth scroll for internal links
+
+Handles responsive nav on resize
+
+firms.js
+
+Fetch and render firms.json
+
+Filter firms by capital/profit split
+
+Lazy-load logos
+
+compare.js
+
+Populate two dropdowns from firms.json
+
+Render comparison table
+
+Highlights best metrics
+
+blog.js
+
+Fetch and render blogs.json
+
+Create blog cards dynamically
+
+Root Folder structure: 
+
+FPT_new/
+├── index.html           # Home page – hero, trust, featured firms, blog preview, footer
+├── firms.html           # Full list of prop firms with filtering
+├── compare.html         # Compare two prop firms dynamically
+├── blog.html            # Blog listing page
+├── blog-post.html       # Single blog post template
+├── about.html           # About / trust / company info
+│
+├── assets/
+│   ├── css/
+│   │   ├── base.css       # Reset, global styles
+│   │   ├── layout.css     # Grid, flex, spacing, container layout
+│   │   ├── components.css # Reusable components (buttons, cards, tables)
+│   │   └── pages.css      # Page-specific styling (hero, firms, compare, blog, trust)
+│   ├── js/
+│   │   ├── main.js        # Global JS: mobile menu toggle, smooth scroll
+│   │   ├── firms.js       # Load prop firms from JSON, render cards, filter
+│   │   ├── compare.js     # Dynamic firm comparison table
+│   │   └── blog.js        # Load blog posts dynamically from JSON
+│   └── images/
+│       ├── logos/         # Prop firm logos (webp/png)
+│       └── icons/         # SVG icons for trust/features
+│
+└── data/
+    ├── firms.json         # Prop firm dataset (id, name, capital, profit split, payout, logo)
+    └── blogs.json         # Blog dataset (slug, title, excerpt, date)
+

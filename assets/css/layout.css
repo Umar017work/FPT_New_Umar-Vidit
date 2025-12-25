@@ -33,6 +33,17 @@
   color: var(--color-primary);
 }
 
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-btn {
+  margin-left: var(--space-lg);
+}
+
+
+
 /* ===============================
    HERO SECTION
    =============================== */
